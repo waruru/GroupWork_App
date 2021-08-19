@@ -1,24 +1,6 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# GroupWorksアプリ
+## 機能一覧
+- 利用者はグループの作成・参加が可能
+- グループではタスクの一覧表示や、チャットが可能
+- グループ管理者はグループの編集、ユーザー削除などが可能
