@@ -11,10 +11,17 @@
   </head>
 
   <body>
+    <header>
+      <%= render 'share/header' %>
+    </header>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render 'share/header' %>
+
     <%= yield %>
-    <%= render 'share/footer' %>
+
+    <footer>
+      <%= render 'share/footer' %>
+    </footer>
   </body>
 </html>

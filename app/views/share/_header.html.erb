@@ -1,0 +1,17 @@
+<nav id="header" class="navbar">
+  <div class="navbar-brand">
+    <span class="navbar-item title">Group Worker</span>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-end">
+      <% if user_signed_in? %>
+        <span class="navbar-item"><%= current_user.email %></span>
+        <span class="navbar-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></span>
+      <% else %>
+        <span class="navbar-item"><%= link_to "ログイン", new_user_session_path, class: 'post' %></span>
+        <span class="navbar-item"><%= link_to "新規登録", new_user_registration_path, class: 'post' %></span>
+      <% end %>
+    </div>
+  </div>
+</nav>
