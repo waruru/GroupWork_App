@@ -6,7 +6,7 @@
   <div class="navbar-menu">
     <div class="navbar-end">
       <% if user_signed_in? %>
-        <span class="navbar-item"><%= link_to 'プロフィール編集', edit_user_registration_path %></span>
+        <span class="navbar-item"><%= link_to 'プロフィール', user_path(current_user) %></span>
         <span class="navbar-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></span>
       <% else %>
         <span class="navbar-item"><%= link_to "ログイン", new_user_session_path, class: 'post' %></span>

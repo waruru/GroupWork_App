@@ -11,6 +11,9 @@ class ApplicationController < ActionController::Base
 
   protected
   def configure_permitted_parameters
+    # ユーザー登録時に追加するカラム
     devise_parameter_sanitizer.permit(:sign_up, keys: [:display_name])
+    # ユーザー編集時に登録するカラム
+    devise_parameter_sanitizer.permit(:account_update, keys: [:display_name])
   end
 end
