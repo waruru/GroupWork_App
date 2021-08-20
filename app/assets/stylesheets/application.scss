@@ -15,3 +15,8 @@
  */
 @import "reset";
 @import "bulma";
+
+body {
+  background-color: wheat;
+  min-height: 100vh;
+}
