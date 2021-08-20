@@ -1,6 +1,10 @@
 <nav id="header" class="navbar">
   <div class="navbar-brand">
-    <span class="navbar-item title"><%= link_to "Group Worker", root_path %></span>
+    <% if user_signed_in? %>
+      <span class="navbar-item title"><%= link_to "Group Worker", users_path %></span>
+    <% else %>
+      <span class="navbar-item title"><%= link_to "Group Worker", root_path %></span>
+    <% end %>
   </div>
 
   <div class="navbar-menu">
