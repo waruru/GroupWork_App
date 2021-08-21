@@ -2,12 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-@import "bulma";
-
 #header {
   background-color: tan;
 }
-
 
 .footer {
   background-color: tan;
@@ -15,4 +12,12 @@
   padding: 0;
   position: absolute;
   bottom: 0;
+}
+
+.menu {
+  width: 160px;
+  li {
+    padding: 10px;
+    border-top: 1px solid gray;
+  }
 }
