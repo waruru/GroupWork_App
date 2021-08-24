@@ -1,5 +1,5 @@
 class Users::UsersController < ApplicationController
-  layout 'users/layouts/application.html.erb'
+  layout 'layouts/side_menu.html.erb'
   def index
   end
 
