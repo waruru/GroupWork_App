@@ -2,22 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#header {
-  background-color: tan;
+header {
+  // background-color: tan;
+  border-bottom: solid 3px #eeeeee;
 }
 
 .footer {
-  background-color: tan;
+  // background-color: tan;
   width: 100%;
   padding: 0;
   position: absolute;
   bottom: 0;
+  border-top: solid 3px #eeeeee;
 }
 
-.menu {
-  width: 160px;
+aside {
+  width: 180px;
+  margin-left: 60px;
+  padding-top: 12px;
+  padding-right: 10px;
+  border-right: solid 3px #eeeeee;
   li {
-    padding: 10px;
-    border-top: 1px solid gray;
+    height: 50px;
+    border-bottom: solid 3px lightgray;
   }
 }

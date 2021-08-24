@@ -11,15 +11,15 @@
   </head>
 
   <body>
-  <h1>test</h1>
-    <header class="header">
-      <%= render 'share/header' %>
-    </header>
+    <%= render 'share/header' %>
 
-    <%= yield %>
+    <article>
+      <%= render 'share/sidemenu' %>
+      <section>
+        <%= yield %>
+      </section>
+    </article>
 
-    <footer class="footer">
-      <%= render 'share/footer' %>
-    </footer>
+    <%= render 'share/footer' %>
   </body>
 </html>

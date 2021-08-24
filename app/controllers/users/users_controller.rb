@@ -1,4 +1,5 @@
 class Users::UsersController < ApplicationController
+  layout 'users/layouts/application.html.erb'
   def index
   end
 

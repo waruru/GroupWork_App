@@ -1,21 +1,23 @@
-<nav id="header" class="navbar">
-  <div class="navbar-brand">
-    <% if user_signed_in? %>
-      <span class="navbar-item title"><%= link_to "Group Worker", users_path %></span>
-    <% else %>
-      <span class="navbar-item title"><%= link_to "Group Worker", root_path %></span>
-    <% end %>
-  </div>
-
-  <div class="navbar-menu">
-    <div class="navbar-end">
+<header class="header">
+  <nav id="header" class="navbar">
+    <div class="navbar-brand">
       <% if user_signed_in? %>
-        <span class="navbar-item"><%= link_to 'プロフィール', user_path(current_user) %></span>
-        <span class="navbar-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></span>
+        <span class="navbar-item title"><%= link_to "Group Worker", users_path %></span>
       <% else %>
-        <span class="navbar-item"><%= link_to "ログイン", new_user_session_path, class: 'post' %></span>
-        <span class="navbar-item"><%= link_to "新規登録", new_user_registration_path, class: 'post' %></span>
+        <span class="navbar-item title"><%= link_to "Group Worker", root_path %></span>
       <% end %>
     </div>
-  </div>
-</nav>
+
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <% if user_signed_in? %>
+          <span class="navbar-item"><%= link_to 'プロフィール', user_path(current_user) %></span>
+          <span class="navbar-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></span>
+        <% else %>
+          <span class="navbar-item"><%= link_to "ログイン", new_user_session_path, class: 'post' %></span>
+          <span class="navbar-item"><%= link_to "新規登録", new_user_registration_path, class: 'post' %></span>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+</header>

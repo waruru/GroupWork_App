@@ -17,7 +17,14 @@
 @import "bulma";
 @import "reset";
 
+html {
+  height: 100vh;
+}
+
 body {
-  background-color: wheat;
-  min-height: 100vh;
+  height: 100vh;
+  article {
+    display: inline-flex;
+    min-height: 80vh;
+  }
 }
