@@ -5,6 +5,7 @@ class GroupsController < ApplicationController
   end
 
   def show
+    @group = Group.find(params[:id])
   end
 
   def new
@@ -15,9 +16,9 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(group_params)
+    @group = current_user.groups.new(group_params)
     if @group.save
-      redirect_to groups_path, notice: 'グループを作成しました'
+      redirect_to group_path(@group), notice: 'グループを作成しました'
     else
       render :new
     end
@@ -25,6 +26,6 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name)
+    params.require(:group).permit(:name, group_users)
   end
 end

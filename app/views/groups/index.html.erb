@@ -2,5 +2,5 @@
 <p>Find me in app/views/groups/index.html.erb</p>
 
 <% @groups.each do |group| %>
-  <p><%= group.name %></p>
+  <p><%= link_to group.name, group_path(group) %></p>
 <% end %>
