@@ -6,6 +6,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @users = @group.users
   end
 
   def new
@@ -17,7 +18,8 @@ class GroupsController < ApplicationController
 
   def create
     @group = current_user.groups.new(group_params)
-    if @group.save
+    if current_user.save
+      set_owner
       redirect_to group_path(@group), notice: 'グループを作成しました'
     else
       render :new
@@ -26,6 +28,10 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name, group_users)
+    params.require(:group).permit(:name, user_ids: [])
+  end
+
+  def set_owner
+    GroupUser.where(user: current_user, group: @group).update(is_owner: true)
   end
 end
